@@ -1,9 +1,10 @@
 .App {
   font-family: sans-serif;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 250px;
   margin-right: 250px;
+  margin-bottom: 20px;
 }
 
 body {
@@ -13,15 +14,10 @@ body {
   background-image: url("./images/blue.jpg");
 }
 
-h1 {
-  padding: 20px;
-  text-align: center;
-  text-transform: capitalize;
-  margin-top: 20px;
-}
 .container {
   margin: 200px auto;
-  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   width: 700px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -29,24 +25,26 @@ h1 {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  color: aliceblue;
 }
 .locationForm {
   display: block;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 #currentLocation {
   display: block;
   margin: 0 auto;
-  margin-top: 40px;
+  color: rgb(5, 38, 67);
+  margin-top: 10px;
+  margin-bottom: 10px;
   border: none;
   background-color: none;
   background: none;
-  font-size: small;
-  padding: 5px;
+  font-size: 20px;
 }
 #currentLocation:hover {
-  color: rgb(49, 3, 92);
+  color: aliceblue;
   cursor: pointer;
 }
 .searchbar {
@@ -72,6 +70,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 130px;
 }
 #sun-picture {
   padding-left: 250px;
@@ -170,7 +169,7 @@ p {
   font-size: small;
 }
 #githubLogo {
-  background: #235796;
+  background: #201e80;
   width: 40px;
   display: block;
   margin: 0 auto;

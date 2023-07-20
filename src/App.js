@@ -10,8 +10,8 @@ export default function App() {
         <Form />
         <br />
         <Forecast />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
