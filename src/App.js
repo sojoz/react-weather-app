@@ -8,10 +8,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>The Weather Outside is Weather</h1>
         <Form />
-        <br />
-        <Mainsection />
         <br />
         <Forecast />
         <Footer />
