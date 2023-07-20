@@ -9,7 +9,6 @@ export default function Footer() {
         {" "}
         Open-sourced on Github
       </a>
-      <br />
     </div>
   );
 }

@@ -23,7 +23,6 @@ export default function MainSection() {
         <div className="main-list">
           <p id="mainTemperature">12°C</p>
           <p id="weatherText">Sunny Day</p>
-          <br />
           <p id="windSpeed">Wind: 12 km/h</p>
           <p id="humidity">Precipitation: 6%</p>
         </div>
