@@ -1,6 +1,5 @@
 import "./App.css";
 import Form from "./Form.js";
-import Mainsection from "./Mainsection.js";
 import Forecast from "./Forecast.js";
 import Footer from "./Footer.js";
 
