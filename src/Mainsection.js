@@ -15,7 +15,7 @@ export default function MainSection() {
       <div className="middle-text">
         <div>
           <iframe
-            class="frame-weather"
+            className="frame-weather"
             src={Sun}
             title="animated icon"
           ></iframe>
