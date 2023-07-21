@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sun from "./svg/a_1_sunny.svg";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function Form() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -13,6 +14,7 @@ export default function Form() {
       weatherText: response.data.weather[0].description,
       windSpeed: response.data.wind.speed,
       precipitation: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
     });
   }
   if (weatherData.ready) {
@@ -33,10 +35,7 @@ export default function Form() {
         <section className="middle-part">
           <h2>Utrecht</h2>
           <p className="Date-and-time" id="dateTime1">
-            Monday 3rd April
-          </p>
-          <p className="Date-and-time" id="dateTime2">
-            14:34
+            <FormattedDate date={weatherData.date} />
           </p>
           <div className="middle-text">
             <div>
