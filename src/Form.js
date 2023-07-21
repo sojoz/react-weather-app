@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import Sun from "./svg/a_1_sunny.svg";
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 import FormattedDate from "./FormattedDate";
+import "./App.css";
 
-export default function Form() {
+export default function Form(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -15,12 +18,29 @@ export default function Form() {
       windSpeed: response.data.wind.speed,
       precipitation: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
+      city: response.data.name,
     });
   }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "05af9d47239cd7aaf08f34ff3be4d1d6";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (weatherData.ready) {
     return (
       <div>
-        <form className="locationForm">
+        <form className="locationForm" onSubmit={handleSubmit}>
           <input
             className="searchbar"
             type="text"
@@ -28,43 +48,21 @@ export default function Form() {
             placeholder="Location"
             id="searchbarInput"
             autoFocus="on"
+            onChange={handleCityChange}
           />
           <input className="searchbutton" type="submit" value="Search" />
           <button id="currentLocation">Current Location</button>
         </form>
         <section className="middle-part">
-          <h2>Utrecht</h2>
+          <h2>{weatherData.city}</h2>
           <p className="Date-and-time" id="dateTime1">
             <FormattedDate date={weatherData.date} />
           </p>
-          <div className="middle-text">
-            <div>
-              <iframe
-                className="frame-weather"
-                src={Sun}
-                title="animated icon"
-              ></iframe>
-            </div>
-            <div className="main-list">
-              <p id="mainTemperature">
-                {Math.round(weatherData.temperature)}°C
-              </p>
-              <p id="weatherText">{weatherData.weatherText}</p>
-              <p id="windSpeed">
-                Wind: {Math.round(weatherData.windSpeed)} km/h
-              </p>
-              <p id="humidity">Humidity: {weatherData.precipitation}%</p>
-            </div>
-          </div>
+          <WeatherInfo data={weatherData} />
         </section>
       </div>
     );
   } else {
-    const apiKey = "05af9d47239cd7aaf08f34ff3be4d1d6";
-    let city = "Tokyo";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-    axios.get(apiUrl).then(handleResponse);
     return "Loading...";
   }
 }
