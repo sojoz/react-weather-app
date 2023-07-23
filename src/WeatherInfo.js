@@ -3,7 +3,6 @@ import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
-  const [weatherData, setWeatherData] = useState({ ready: false });
   return (
     <div className="middle-text">
       <div>
