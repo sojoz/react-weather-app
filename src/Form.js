@@ -18,8 +18,10 @@ export default function Form(props) {
       precipitation: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
+      icon: response.data.weather[0].icon,
     });
   }
+
   function search() {
     const apiKey = "05af9d47239cd7aaf08f34ff3be4d1d6";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -61,6 +63,7 @@ export default function Form(props) {
       </div>
     );
   } else {
+    search();
     return "Loading...";
   }
 }

@@ -1,18 +1,17 @@
-import React from "react";
-import Sun from "./svg/a_1_sunny.svg";
+import React, { useState } from "react";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
   return (
     <div className="middle-text">
       <div>
-        <iframe
-          className="frame-weather"
-          src={Sun}
-          title="animated icon"
-        ></iframe>
+        <WeatherIcon code={props.data.icon} />
       </div>
       <div className="main-list">
-        <p id="mainTemperature">{Math.round(props.data.temperature)}°C</p>
+        <WeatherTemperature celcius={props.data.temperature} />
+
         <p id="weatherText">{props.data.weatherText}</p>
         <p id="windSpeed">Wind: {Math.round(props.data.windSpeed)} km/h</p>
         <p id="humidity">Humidity: {props.data.precipitation}%</p>
