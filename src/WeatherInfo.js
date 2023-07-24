@@ -9,7 +9,10 @@ export default function WeatherInfo(props) {
         <WeatherIcon code={props.data.icon} />
       </div>
       <div className="main-list">
-        <WeatherTemperature celcius={props.data.temperature} />
+        <WeatherTemperature
+          celcius={props.data.temperature}
+          className="main-picture"
+        />
 
         <p id="weatherText">{props.data.weatherText}</p>
         <p id="windSpeed">Wind: {Math.round(props.data.windSpeed)} km/h</p>

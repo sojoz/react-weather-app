@@ -5,7 +5,7 @@ export default function WeatherIcon(props) {
   console.log(props);
   const codeMapping = {
     "01d": { icon: "CLEAR_DAY", color: "#ffce55" },
-    "01n": { icon: "CLEAR_NIGHT", color: "#FFE263" },
+    "01n": { icon: "CLEAR_NIGHT", color: "#ffce55" },
     "02d": { icon: "PARTLY_CLOUDY_DAY", color: "#ffce55" },
     "02n": { icon: "PARTLY_CLOUDY_NIGHT", color: "#A3A06A" },
     "03d": { icon: "PARTLY_CLOUDY_DAY", color: "#ffce55" },

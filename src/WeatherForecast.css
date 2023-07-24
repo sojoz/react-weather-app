@@ -1,0 +1,48 @@
+.WeatherForecast {
+  text-align: center;
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top: 30px;
+}
+
+.WeatherForecast canvas {
+  width: 40px;
+  border: none;
+  margin-left: 0px;
+  height: 40px;
+}
+
+.row h4 {
+  font-size: 20px;
+}
+
+.row {
+  background: none;
+  display: block;
+  margin: 0 auto;
+}
+.weather-forecast-max {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+
+.weather-forecast-min {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+}
+
+.col {
+  font-size: 20px;
+  margin-bottom: 30px;
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  height: 20%;
+}
+.col h3 {
+  font-size: 15px;
+}
