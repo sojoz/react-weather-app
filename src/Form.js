@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import FormattedDate from "./FormattedDate";
-import WeatherForecast from "./WeatherForecast"
+import WeatherForecast from "./WeatherForecast";
 import "./App.css";
 
 export default function Form(props) {
@@ -20,6 +20,7 @@ export default function Form(props) {
       precipitation: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
+      country: response.data.sys.country,
       icon: response.data.weather[0].icon,
     });
   }
@@ -47,7 +48,7 @@ export default function Form(props) {
             className="searchbar"
             type="text"
             autoComplete="off"
-            placeholder="Location"
+            placeholder="Enter a city..."
             id="searchbarInput"
             autoFocus="on"
             onChange={handleCityChange}
@@ -56,7 +57,9 @@ export default function Form(props) {
           <button id="currentLocation">Current Location</button>
         </form>
         <section className="middle-part">
-          <h2>{weatherData.city}</h2>
+          <h2>
+            {weatherData.city},{""} {weatherData.country}{" "}
+          </h2>
           <p className="Date-and-time" id="dateTime1">
             <FormattedDate date={weatherData.date} />
           </p>
