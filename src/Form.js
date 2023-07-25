@@ -54,7 +54,6 @@ export default function Form(props) {
             onChange={handleCityChange}
           />
           <input className="searchbutton" type="submit" value="Search" />
-          <button id="currentLocation">Current Location</button>
         </form>
         <section className="middle-part">
           <h2>

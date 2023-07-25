@@ -31,32 +31,16 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
-#currentLocation {
-  display: block;
-  margin: 0 auto;
-  color: rgb(5, 38, 67);
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
-  background-color: none;
-  background: none;
-  font-size: 20px;
-}
-#currentLocation:hover {
-  color: aliceblue;
-  cursor: pointer;
-}
+
 .searchbar {
   border-radius: 5px;
 }
 .searchbutton {
   border-radius: 5px;
 }
-.searchbutton:hover {
-  background-color: rgb(49, 3, 92);
-  color: white;
-}
+
 .middle-part h2 {
   text-align: center;
   font-size: 24px;
@@ -141,13 +125,13 @@ p {
   margin-left: 125px;
 }
 
-
 #githubLogo {
   background: #201e80;
   width: 40px;
   display: block;
   margin: 0 auto;
   border-radius: 50px;
+  margin-bottom: 10px;
 }
 #githubLink {
   text-decoration: none;
