@@ -146,3 +146,39 @@ p {
 #githubLink:hover {
   color: rgb(49, 3, 92);
 }
+
+@media (max-width: 960px) {
+  .App {
+    max-width: 800px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  .middle-text canvas {
+    margin: 0 auto;
+    margin-left: 40px;
+  }
+
+  .main-list {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  #mainTemperature {
+    font-size: 20px;
+  }
+
+  .middle-text {
+    text-align: center;
+  }
+
+  #githubLogo {
+    margin-top: 20px;
+  }
+}

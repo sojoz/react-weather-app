@@ -46,3 +46,29 @@
 .col h3 {
   font-size: 15px;
 }
+
+@media (max-width: 960px) {
+  .WeatherForecast {
+    margin: 0 auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  
+  .weather-forecast-max {
+    font-size: 9px;
+    padding: 5px;
+  }
+  .weather-forecast-min {
+    font-size: 9px;
+    padding: 5px;
+  }
+  .col {
+    margin-bottom: 15px;
+  }
+  .col br {
+    display: none;
+  }
+}
